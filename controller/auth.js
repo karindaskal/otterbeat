@@ -1,8 +1,8 @@
 const User = require("../models/user")
 const bcrypt = require("bcrypt")
-var jwt = require('jsonwebtoken');
-const logger = require("../logger");
-const { error } = require("winston");
+const { generateToken } = require("../utils/jwt")
+
+
 require('dotenv').config();
 const register = (async (req, res, next) => {
     try {
@@ -59,15 +59,10 @@ const login = (async (req, res, next) => {
                 next(["worng password", 404])
             }
             else {
-                const token = jwt.sign(
-                    { id: user.id },
-                    process.env.TOKEN_KEY,
-                    {
-                        expiresIn: "2h",
-                    }
-                )
-                user.token = token;
-                res.status(200).json(user)
+                const token = generateToken({ id: user._id });
+                console.log(token);
+
+                res.status(200).json({ token, user })
             }
         })
 

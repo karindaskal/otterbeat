@@ -30,10 +30,10 @@ const UserSecm = new mongoose.Schema({
         default: false
 
     },
-    favorites: {
-        type: Array,
-        default: []
-    },
+    favorites: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'songs'
+    }],
 
 
 

@@ -3,8 +3,8 @@ const mongoose = require("mongoose")
 const SongSecm = new mongoose.Schema({
 
     artist_Id: {
-        type: String,
-        required: true,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'artist'
     },
     song_title: {
         type: String,

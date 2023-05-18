@@ -1,11 +1,13 @@
 const router = require("express").Router();
 const Song = require('../models/song')
-const Artis = require('../models/artist');
-const User = require("../models/user");
+
+const { auth } = require("../middleware/auth")
 const {
     getFavorite,
-    getByArtist
+    getByArtist,
+    addNewSong
 } = require("../controller/songC")
-router.get("/:artisname", getByArtist)
-router.get("/:id/favorite", getFavorite)
+router.put("/", addNewSong)
+router.get("/", getByArtist)
+router.get("/favorite", auth, getFavorite)
 module.exports = router

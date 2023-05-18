@@ -1,14 +1,21 @@
 const User = require("../models/user")
 async function canAdd(req, res, next) {
     try {
-        const user = await User.findById(req.body.id)
+
+        const user = await User.findById(res.locals.id)
         if (user.is_premium || user.favorites.length < 5) {
-            next()
+            res.locals.canAdd = true;
+
         }
-        else
-            res.status(200).json("you cant add more song")
+        else {
+            res.locals.canAdd = false;
+
+        }
+        next()
+
     }
     catch (err) {
+        console.log(err)
         next([err, 500])
     }
 

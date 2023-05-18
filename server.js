@@ -1,13 +1,13 @@
 const mongoose = require("mongoose")
 const express = require("express")
 const app = express();
-require('dotenv').config();
+const logger = require("./logger");
 const songRouter = require('./router/song')
 const authRouter = require('./router/auth')
 const userRouter = require('./router/user')
 const { error } = require('./eror')
+require('dotenv').config();
 const { myCache } = require('./controller/cache')
-
 const MONGO_URL = 'mongodb+srv://karindaskal:Kkkk1111@cluster0.wd2bnfp.mongodb.net/?retryWrites=true&w=majority'
 async function conect() {
     try {
@@ -20,14 +20,15 @@ async function conect() {
 }
 
 app.use(express.json())
-app.use(error)
+
 app.use("/user", userRouter,)
 app.use("/song", songRouter,)
 app.use("/auth", authRouter,)
 
 app.use((err, req, res, next) => {
-    res.status(err[1]).json(err[0])
     logger.error(err[0])
+    res.status(err[1]).json(err[0])
+
 })
 conect();
 
