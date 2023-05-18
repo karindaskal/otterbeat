@@ -1,0 +1,98 @@
+{"level":"error","message":"Cast to ObjectId failed for value \"64576c8ae9f8296d55081a\" (type string) at path \"_id\" for model \"user\""}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"err is not defined"}
+{"level":"error","message":"np id on body"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"myCache is not defined"}
+{"level":"error","message":"myCache.has is not a function"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'has')"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'has')"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'has')"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'has')"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'has')"}
+{"level":"error","message":"myCache.has is not a function"}
+{"level":"error","message":"myCache.has is not a function"}
+{"level":"error","message":"myCache.has is not a function"}
+{"level":"error","message":"myCache.has is not a function"}
+{"level":"error","message":"Json is not defined"}
+{"level":"error","message":"Unexpected token o in JSON at position 1"}
+{"level":"error","message":"Unexpected token o in JSON at position 1"}
+{"level":"error","message":"Unexpected token o in JSON at position 1"}
+{"level":"error","message":"Unexpected token o in JSON at position 1"}
+{"level":"error","message":"Unexpected token u in JSON at position 0"}
+{"level":"error","message":"myCache.get(...).trim is not a function"}
+{"level":"error","message":"JSON.parsesin is not a function"}
+{"level":"error","message":"myCache.exists is not a function"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'trim')"}
+{"level":"error","message":"data is not defined"}
+{"level":"error","message":"data is not defined"}
+{"level":"error","message":"data is not defined"}
+{"level":"error","message":"data is not defined"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"data is not defined"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot access 'key' before initialization"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot access 'user' before initialization"}
+{"level":"error","message":"Cannot access 'user' before initialization"}
+{"level":"error","message":"Cannot access 'user' before initialization"}
+{"level":"error","message":"Cannot access 'user' before initialization"}
+{"level":"error","message":"Cannot access 'user' before initialization"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"data is not defined"}
+{"level":"error","message":"data is not defined"}
+{"level":"error","message":"data is not defined"}
+{"level":"error","message":"data is not defined"}
+{"level":"error","message":"data is not defined"}
+{"level":"error","message":"data.trim is not a function"}
+{"level":"error","message":"Unexpected token o in JSON at position 1"}
+{"level":"error","message":"trim is not defined"}
+{"level":"error","message":"data.trim is not a function"}
+{"level":"error","message":"data.trim is not a function"}
+{"level":"error","message":"Unexpected token s in JSON at position 0"}
+{"level":"error","message":"Unexpected token o in JSON at position 1"}
+{"level":"error","message":"Cannot read properties of null (reading 'favorites')"}
+{"level":"error","message":"arr.filter is not a function"}
+{"level":"error","message":"data.trim is not a function"}
+{"level":"error","message":"Unexpected token o in JSON at position 1"}
+{"level":"error","message":"data.push is not a function"}
+{"level":"error","message":"Unexpected token o in JSON at position 1"}
+{"level":"error","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'MongoClient'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'client' closes the circle"}
+{"level":"error","message":"Unexpected token o in JSON at position 1"}
+{"level":"error","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'MongoClient'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'client' closes the circle"}
+{"level":"error","message":"arr.trim is not a function"}
+{"level":"error","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'MongoClient'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'client' closes the circle"}
+{"level":"error","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'MongoClient'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'client' closes the circle"}
+{"level":"error","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'MongoClient'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'client' closes the circle"}
+{"level":"error","message":"arr.trim is not a function"}
+{"level":"error","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'MongoClient'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'client' closes the circle"}
+{"level":"error","message":"arr.trim is not a function"}
+{"level":"error","message":"Converting circular structure to JSON\n    --> starting at object with constructor 'MongoClient'\n    |     property 's' -> object with constructor 'Object'\n    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'\n    --- property 'client' closes the circle"}
