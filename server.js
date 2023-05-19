@@ -7,7 +7,7 @@ const authRouter = require('./router/auth')
 const userRouter = require('./router/user')
 const { error } = require('./eror')
 require('dotenv').config();
-const { myCache } = require('./controller/cache')
+const { myCache } = require('./utils/cache')
 const MONGO_URL = 'mongodb+srv://karindaskal:Kkkk1111@cluster0.wd2bnfp.mongodb.net/?retryWrites=true&w=majority'
 async function conect() {
     try {

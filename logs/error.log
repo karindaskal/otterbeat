@@ -163,3 +163,18 @@
 {"level":"error","message":"cant add more"}
 {"level":"error","message":"cant add more"}
 {"level":"error","message":"cant add more"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"worng password"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"The client is closed"}
+{"level":"error","message":"key is not defined"}
+{"level":"error","message":"getDataParse is not a function"}
+{"level":"error","message":"getDataParse is not defined"}

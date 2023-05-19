@@ -2,7 +2,6 @@ const { decodeToken } = require("../utils/jwt");
 
 const auth = (req, res, next) => {
     try {
-        console.log("auth")
 
         let token = req.headers.authorization;
         if (!token) {
@@ -11,11 +10,7 @@ const auth = (req, res, next) => {
 
         token = token.split(" ")[1];
         const payload = decodeToken(token)
-
-
-        console.log(payload.id);
         res.locals.id = payload.id;
-
         next();
     } catch (error) {
         res.status(401).json("somthing went wrong");

@@ -11,10 +11,10 @@ const register = (async (req, res, next) => {
             next(["invalid password", 403])
         }
         else if (req.body.user_name.length < 1) {
-            next(["user name can't be emptey,403"])
+            next(["user name can't be emptey", 403])
         }
         else {
-            await bcrypt.hash(req.body.password, salt, async (err, hash) => {
+            bcrypt.hash(req.body.password, salt, async (err, hash) => {
                 if (err) {
                     next([err, 500])
                 }
@@ -39,10 +39,7 @@ const register = (async (req, res, next) => {
         }
     }
     catch (err) {
-
-
         next([err, 500])
-
     }
 })
 const login = (async (req, res, next) => {
@@ -52,7 +49,7 @@ const login = (async (req, res, next) => {
         !user && res.status(404).json("user not found");
         await bcrypt.compare(req.body.password, user.password, (err, isValid) => {
             if (err) {
-                console.log(err)
+
                 next([err, 500]);
             }
             else if (!isValid) {
@@ -69,7 +66,6 @@ const login = (async (req, res, next) => {
 
     }
     catch (err) {
-        console.log(err)
         next([err, 500])
     }
 })
