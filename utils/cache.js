@@ -14,7 +14,8 @@ const addToChase = async (key, value) => {
         }
     }
     catch (err) {
-        throw new Error(err.message);
+
+        throw err
     }
 
 
@@ -26,7 +27,8 @@ const delateFronCache = async (key, value) => {
         arr = arr.filter(element => element._id != value)
         await setKey(key, arr)
     } catch (err) {
-        throw new Error(err.message);
+
+        throw err
     }
 
 
@@ -37,7 +39,7 @@ const hasKey = async (key) => {
         return has == 1
     }
     catch (err) {
-        throw new Error(err.message);
+        throw err
     }
 }
 const getDataParse = async (key) => {
@@ -48,7 +50,7 @@ const getDataParse = async (key) => {
         return data;
     }
     catch (err) {
-        throw new Error(err.message);
+        throw err
     }
 
 }
@@ -56,7 +58,7 @@ const setKey = async (key, value) => {
     try {
         await myCache.set(key, JSON.stringify(value))
     } catch (err) {
-        throw new Error(err.message);
+        throw err
     }
 
 }

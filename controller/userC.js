@@ -15,7 +15,7 @@ const like = (async (req, res, next) => {
             }
             await user.updateOne({ $push: { favorites: req.params.id } })
             if (await hasKey(key)) {
-                addToChase(key, await Song.findById(req.params.id).populate("artist_Id"))
+                await addToChase(key, await Song.findById(req.params.id).populate("artist_Id"))
             }
             res.status(200).json("the song has been like")
 
@@ -24,7 +24,7 @@ const like = (async (req, res, next) => {
 
             await user.updateOne({ $pull: { favorites: req.params.id } })
             if (await hasKey(key)) {
-                delateFronCache(key, req.params.id)
+                await delateFronCache(key, req.params.id)
             }
             res.status(200).json("the song has been dislike")
 
@@ -33,16 +33,20 @@ const like = (async (req, res, next) => {
     }
     catch (err) {
 
-        next([err, 500])
+        next([err.message, 500])
     }
 })
 const update = (async (req, res, next) => {
+
 
     try {
         const user_id = res.locals.id
         if (!user_id) next(["somthig worng", 500])
         else {
             const user = await User.findByIdAndUpdate(user_id, { $set: req.body, })
+            const d = await User.aggregate([{ $unwind: "$favorites" }, { $group: { _id: "$favorites", count: { $sum: 1 } } }, { $sort: { count: -1 } }, { $populate: "_id" }]).limit(3)
+            //  User.aggregate([{ $unwind: "$favorites" }, { $populate: "$favorites" }])
+            console.log(d)
             res.status(200).json(user)
         }
     }

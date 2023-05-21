@@ -1,7 +1,5 @@
 const Song = require('../models/song')
 const Artis = require('../models/artist');
-const User = require("../models/user");
-const logger = require("../logger");
 const getAllSong = async (req, res, next) => {
     try {
         const songs = await Song.find().populate("artist_Id");
@@ -39,8 +37,21 @@ const addNewSong = (async (req, res, next) => {
 
 
 })
+const deleteSong = async (req, res, next) => {
+
+    try {
+        await
+            Song.findByIdAndDelete(req.params.id)
+        res.status(200).json("the song has been deleted")
+    } catch (err) {
+        next([err, 500])
+    }
+
+}
+
 
 module.exports = {
+    deleteSong,
     addNewSong,
     getByArtist,
     getAllSong

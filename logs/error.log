@@ -178,3 +178,52 @@
 {"level":"error","message":"key is not defined"}
 {"level":"error","message":"getDataParse is not a function"}
 {"level":"error","message":"getDataParse is not defined"}
+{"level":"error"}
+{"level":"error","message":"arr.filter is not a function"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"$anwind is not allowed or the syntax is incorrect, see the Atlas documentation for more information"}
+{"level":"error","message":"User.aggregate(...).pretty is not a function"}
+{"level":"error","message":"the $sort key specification must be an object"}
+{"level":"error","message":"User.populate(...).aggregate is not a function"}
+{"level":"error","message":"User.find(...).populate(...).aggregate is not a function"}
+{"level":"error","message":"User.populate(...).aggregate is not a function"}
+{"level":"error","message":"User.populate(...).aggregate is not a function"}
+{"level":"error","message":"User.aggregate(...).limit(...).populate is not a function"}
+{"level":"error","message":"d.populate is not a function"}
+{"level":"error","message":"User.find(...).populate(...).aggregate is not a function"}
+{"level":"error","message":"User.find(...).aggregate is not a function"}
+{"level":"error","message":"$populate is not allowed or the syntax is incorrect, see the Atlas documentation for more information"}
+{"level":"error","message":"$populate is not allowed or the syntax is incorrect, see the Atlas documentation for more information"}
+{"level":"error","message":"$populate is not allowed or the syntax is incorrect, see the Atlas documentation for more information"}
+{"level":"error","message":"_id is not defined"}
+{"level":"error","message":"favorites is not defined"}
+{"level":"error","message":"$populate is not allowed or the syntax is incorrect, see the Atlas documentation for more information"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235240802341879845"},"signature":{"hash":"OrCV8UQiFEWWYdpnqJatx7FlBeg=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":9,"codeName":"FailedToParse","level":"error","ok":0,"operationTime":{"$timestamp":"7235240789456977977"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235241098694623267"},"signature":{"hash":"TVCXSDaJbOcdWqCIA1HxeDVidaY=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":9,"codeName":"FailedToParse","level":"error","ok":0,"operationTime":{"$timestamp":"7235241098694623266"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235241811659194385"},"signature":{"hash":"K3dEHXmN7qzPE1bSPm9pR0/EUr8=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":9,"codeName":"FailedToParse","level":"error","ok":0,"operationTime":{"$timestamp":"7235241811659194385"}}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235309294185349127"},"signature":{"hash":"4tasb80Gm4/lWNK+fS2L/kiejuQ=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":40234,"codeName":"Location40234","level":"error","ok":0,"operationTime":{"$timestamp":"7235309294185349127"}}
+{"code":8000,"codeName":"AtlasError","level":"error","ok":0}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235322269281550394"},"signature":{"hash":"piszqNhNadrAk3fxgk0HkT5Bq98=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":40234,"codeName":"Location40234","level":"error","ok":0,"operationTime":{"$timestamp":"7235322269281550394"}}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"code":8000,"codeName":"AtlasError","level":"error","ok":0}
+{"level":"error"}
+{"code":8000,"codeName":"AtlasError","level":"error","ok":0}
+{"code":8000,"codeName":"AtlasError","level":"error","ok":0}
