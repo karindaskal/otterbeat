@@ -1,23 +1,15 @@
 const User = require("../models/user")
 const Song = require("../models/song")
 const mongoose = require("mongoose")
+const song = require("../models/song")
 const mostFavorableSong = async (req, res, next) => {
     try {
         const d = await User.aggregate([{ $unwind: "$favorites" },
-        /*  {
-  
-              $lookup: {
-                  from: "songs", localField: "favorites",
-                  foreignField: "_id",
-                  as: "artist"
-              }
-          },*/
 
         {
             $group: {
                 _id: "$favorites",
                 count: { $sum: 1 },
-                // artist: "$artist"
 
 
             }
@@ -28,31 +20,20 @@ const mostFavorableSong = async (req, res, next) => {
             $lookup: {
                 from: "songs", localField: "_id",
                 foreignField: "_id",
-                as: "song"
+                as: "song",
+                pipeline: [{
+                    $lookup: {
+                        from: "artists", localField: "artist_Id",
+                        foreignField: "_id",
+                        as: "artist"
+                    }
+                }
+                ]
             }
         },
-        {
-
-            $lookup: {
-                from: "artists", localField: "song.artist_Id",
-                foreignField: "_id",
-                as: "artist"
-            }
-        },
-
-
-
         { $sort: { count: -1 } },
         ]).limit(3)
-        /* const data = await User.find({}).populate({ path: "favorites", populate: { path: "artist_Id" } })
-         const d = await User.find({}).populate({ path: "favorites", populate: { path: "artist_Id" } }).then(function (err, data) {
-             if (err) {
-                 console.log(err);
-             } else {
-                 data.aggregate({ $unwind: "$favorites" })
-             }
- 
-         })*/
+
 
 
 
@@ -115,41 +96,41 @@ const mostFavorableArtist = async (req, res, next) => {
 }
 const mostFavorableSongDecade = async (req, res, next) => {
     try {
-        const d = await User.aggregate([{ $unwind: "$favorites" },
-        {
+        const d = await User.aggregate(
+            [
+                { $unwind: "$favorites" },
 
-            $lookup: {
-                from: "songs", localField: "favorites",
-                foreignField: "_id",
-                as: "song"
-            }
-        },
-        { $unwind: "$song" },
-        /*  {
-              $filter: {
-  
-                  song.createdAt: { $eq: 2023 },
-  
-  
-              }
-          },*/
+                {
+                    $group: {
+                        _id: "$favorites",
+                        count: { $sum: 1 }
+                    }
+                },
+                {
 
-        {
-            $group: {
-                _id: "$song.artist_Id",
-                count: { $sum: 1 },
+                    $lookup: {
+                        from: "songs", localField: "_id",
+                        foreignField: "_id",
+                        as: "songs",
+                        pipeline: [
 
+                            {
+                                $match: {
+                                    "createdAt": { $gte: new Date("2023-05-01"), $lt: new Date("2023-05-30") }
+                                }
+                            },
 
+                        ]
 
-            }
-        },
-
-
+                    }
+                },
 
 
-
-        { $sort: { count: -1 } },
-        ]).limit(3)
+                {
+                    $sort: { count: -1 }
+                },
+                //    { $project: { _id: 0 } }
+            ])
 
 
 
@@ -161,9 +142,31 @@ const mostFavorableSongDecade = async (req, res, next) => {
 
 
 }
+const longestSongs = async (req, res, next) => {
+    try {
+        const songs = await Song.find().sort({ duration_sec: -1 }).populate("artist_Id").limit(3)
+        res.status(200).json(songs)
+    } catch (err) {
+        next([err, 500])
+    }
+
+
+}
+const shortestSongs = async (req, res, next) => {
+    try {
+        const songs = await Song.find().sort({ duration_sec: 1 }).populate("artist_Id").limit(3)
+        res.status(200).json(songs)
+    } catch (err) {
+        next([err, 500])
+    }
+
+
+}
 
 module.exports = {
     mostFavorableSong,
     mostFavorableArtist,
-    mostFavorableSongDecade
+    mostFavorableSongDecade,
+    longestSongs,
+    shortestSongs
 }
