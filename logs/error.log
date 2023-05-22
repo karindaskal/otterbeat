@@ -227,3 +227,63 @@
 {"level":"error"}
 {"code":8000,"codeName":"AtlasError","level":"error","ok":0}
 {"code":8000,"codeName":"AtlasError","level":"error","ok":0}
+{"level":"error","message":"worng password"}
+{"level":"error","message":"$regex has to be a string"}
+{"level":"error","message":"$regex has to be a string"}
+{"level":"error","message":"console.los is not a function"}
+{"level":"error","message":"$regex has to be a string"}
+{"level":"error","message":"query.length is not a function"}
+{"level":"error","message":"query.isEmpty is not a function"}
+{"level":"error","message":"co is not defined"}
+{"level":"error","message":"query.keys is not a function"}
+{"level":"error","message":"co is not defined"}
+{"level":"error","message":"isObjEmpty is not defined"}
+{"level":"error","message":"obqueryj is not defined"}
+{"level":"error","message":"obquery is not defined"}
+{"level":"error","message":"bject is not defined"}
+{"level":"error","message":"object is not defined"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"level":"error","message":"artist1 is not defined"}
+{"level":"error","message":"Cannot read properties of null (reading '_id')"}
+{"code":8000,"codeName":"AtlasError","level":"error","ok":0}
+{"code":8000,"codeName":"AtlasError","level":"error","ok":0}
+{"code":8000,"codeName":"AtlasError","level":"error","ok":0}
+{"level":"error"}
+{"level":"error"}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235591022565130266"},"signature":{"hash":"SScsX9XR5IcY2d6+W63U2MmQXGE=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":28818,"codeName":"Location28818","level":"error","ok":0,"operationTime":{"$timestamp":"7235591022565130266"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235594260970471447"},"signature":{"hash":"tm7pfiYC+ARDJI1x4LaZBIEQeGM=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":2,"codeName":"BadValue","level":"error","ok":0,"operationTime":{"$timestamp":"7235594260970471447"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235596743461568513"},"signature":{"hash":"JNcVMVpwwqAKZ1RUFSJwyUtZRFI=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":2,"codeName":"BadValue","level":"error","ok":0,"operationTime":{"$timestamp":"7235596743461568513"}}
+{"level":"error"}
+{"level":"error"}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235602747825848327"},"signature":{"hash":"pjVSRRwq2fC3obLoDH94CrJum6o=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":28818,"codeName":"Location28818","level":"error","ok":0,"operationTime":{"$timestamp":"7235602747825848327"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235604951144071174"},"signature":{"hash":"3AWMH472zMKIFvENG6bR0UWmrPU=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":40234,"codeName":"Location40234","level":"error","ok":0,"operationTime":{"$timestamp":"7235604951144071174"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235605187367272472"},"signature":{"hash":"m0R0NfhwWY+O0scCc/5uHtymdYE=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":40234,"codeName":"Location40234","level":"error","ok":0,"operationTime":{"$timestamp":"7235605187367272472"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235608357053136917"},"signature":{"hash":"JpqLWsWQnuIw7xC9XIIuBZnuRH8=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":40324,"codeName":"Location40324","level":"error","ok":0,"operationTime":{"$timestamp":"7235608357053136917"}}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235630669408239630"},"signature":{"hash":"actROUXdhOoj8grlqvl8EEFZ6ng=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":40324,"codeName":"Location40324","level":"error","ok":0,"operationTime":{"$timestamp":"7235630669408239630"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235671875324477465"},"signature":{"hash":"/OBhYR60Hda/o9wnRKD4tWAwy+A=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":40324,"codeName":"Location40324","level":"error","ok":0,"operationTime":{"$timestamp":"7235671875324477465"}}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"secound is not defined"}
+{"level":"error","message":"body is not defined"}

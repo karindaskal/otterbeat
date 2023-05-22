@@ -15,6 +15,10 @@ const SongSecm = new mongoose.Schema({
         type: String,
 
     },
+    duration_sec: {
+        type: Number,
+
+    },
     release_year: {
         type: String,
 
