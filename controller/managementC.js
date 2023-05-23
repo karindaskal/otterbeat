@@ -25,7 +25,7 @@ const mostFavorableSong = async (req, res, next) => {
                     $lookup: {
                         from: "artists", localField: "artist_Id",
                         foreignField: "_id",
-                        as: "artist"
+                        as: "artist_Id"
                     }
                 }
                 ]
@@ -73,20 +73,12 @@ const mostFavorableArtist = async (req, res, next) => {
             $lookup: {
                 from: "artists", localField: "_id",
                 foreignField: "_id",
-                as: "artist"
+                as: "artist_Id"
             }
         },
 
-
-
-
-
         { $sort: { count: -1 } },
         ]).limit(3)
-
-
-
-
         res.status(200).json(d)
     } catch (err) {
         next([err, 500])
@@ -95,6 +87,8 @@ const mostFavorableArtist = async (req, res, next) => {
 
 }
 const mostFavorableSongDecade = async (req, res, next) => {
+    const { query } = req;
+
     try {
         const d = await User.aggregate(
             [
@@ -112,25 +106,36 @@ const mostFavorableSongDecade = async (req, res, next) => {
                         from: "songs", localField: "_id",
                         foreignField: "_id",
                         as: "songs",
-                        pipeline: [
-
-                            {
-                                $match: {
-                                    "createdAt": { $gte: new Date("2023-05-01"), $lt: new Date("2023-05-30") }
-                                }
-                            },
-
-                        ]
+                        /* pipeline: [{
+                             $lookup: {
+                                 from: "artists", localField: "artist_Id",
+                                 foreignField: "_id",
+                                 as: "artist"
+                             }
+                         }
+                         ]*/
 
                     }
+                },
+                {
+                    /*  $match: {
+                          "songs.createdAt": { $gte: new Date(query.startYaer), $lt: new Date(query.endYear) }
+                      }*/
+                    "$match": {
+                        "songs.release_year": { $gte: query.startYaer, $lt: query.endYear }
+
+                    }
+
+
+
                 },
 
 
                 {
                     $sort: { count: -1 }
                 },
-                //    { $project: { _id: 0 } }
-            ])
+
+            ]).limit(3)
 
 
 

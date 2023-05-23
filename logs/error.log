@@ -287,3 +287,32 @@
 {"level":"error"}
 {"level":"error","message":"secound is not defined"}
 {"level":"error","message":"body is not defined"}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235972737783562269"},"signature":{"hash":"G360yN8UO+ol/2uQ5cyZA7Jebrk=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":2,"codeName":"BadValue","level":"error","ok":0,"operationTime":{"$timestamp":"7235972737783562269"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235973497992773640"},"signature":{"hash":"jIjcOEYT37Xx/HoWCJg7ZLmeVwY=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":241,"codeName":"ConversionFailure","level":"error","ok":0,"operationTime":{"$timestamp":"7235973497992773640"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235974644749041721"},"signature":{"hash":"tUxaIIUp9XeJpFLCszH0CqoYM/4=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":16878,"codeName":"Location16878","level":"error","ok":0,"operationTime":{"$timestamp":"7235974644749041721"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235974734943354901"},"signature":{"hash":"rxHJR3F3YdS/VVvFfb4bGpq/OXM=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":16879,"codeName":"Location16879","level":"error","ok":0,"operationTime":{"$timestamp":"7235974734943354901"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235974739238322191"},"signature":{"hash":"XVJVNfMDUrfkcjpBCtiyVzWojc8=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":16879,"codeName":"Location16879","level":"error","ok":0,"operationTime":{"$timestamp":"7235974739238322191"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235975241749495820"},"signature":{"hash":"7diCXxxlOY2AODmjEyfBx4JNW90=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":40324,"codeName":"Location40324","level":"error","ok":0,"operationTime":{"$timestamp":"7235975241749495820"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235975435023024160"},"signature":{"hash":"m0UKTfyVKryQLoo8vuoGNcNjE34=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":241,"codeName":"ConversionFailure","level":"error","ok":0,"operationTime":{"$timestamp":"7235975435023024160"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235975645476421654"},"signature":{"hash":"1SrLzmZLTdc8L2ZS9KpqT2nlCF4=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":16879,"codeName":"Location16879","level":"error","ok":0,"operationTime":{"$timestamp":"7235975645476421654"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235976311196352515"},"signature":{"hash":"TUixFAJ6u6TOfsMcpXOZbvQHgBs=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":241,"codeName":"ConversionFailure","level":"error","ok":0,"operationTime":{"$timestamp":"7235976311196352515"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235976435750404122"},"signature":{"hash":"z1QIiPkXSBhi15jbhAwqso8U8JE=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":241,"codeName":"ConversionFailure","level":"error","ok":0,"operationTime":{"$timestamp":"7235976435750404122"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235976671973605398"},"signature":{"hash":"HkG62wms56xGLh3Jtaz5CkAHBIM=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":241,"codeName":"ConversionFailure","level":"error","ok":0,"operationTime":{"$timestamp":"7235976671973605397"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235978196686995485"},"signature":{"hash":"dW2vtGFUjGrhrKP2EEaK2AInZyw=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":2,"codeName":"BadValue","level":"error","ok":0,"operationTime":{"$timestamp":"7235978196686995485"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235978372780654619"},"signature":{"hash":"L9KmdeMYlENpWSGUNW7ur5Hkt24=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":2,"codeName":"BadValue","level":"error","ok":0,"operationTime":{"$timestamp":"7235978372780654619"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235984901130944586"},"signature":{"hash":"moORIUj65BHGLLj5gRExn7zYMps=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":2,"codeName":"BadValue","level":"error","ok":0,"operationTime":{"$timestamp":"7235984901130944586"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235986550398386212"},"signature":{"hash":"V6mykkyoDKrrmNUIGMLfx5mLcjs=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":2,"codeName":"BadValue","level":"error","ok":0,"operationTime":{"$timestamp":"7235986550398386212"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7235996785305452551"},"signature":{"hash":"PMD86dHCstqd8vlK3MqUp8MIDbo=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":2,"codeName":"BadValue","level":"error","ok":0,"operationTime":{"$timestamp":"7235996785305452551"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7236002712360321070"},"signature":{"hash":"nWhxcBD/DB/UNxKPsluR7RBFgA0=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":168,"codeName":"InvalidPipelineOperator","level":"error","ok":0,"operationTime":{"$timestamp":"7236002712360321070"}}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7236008605055451140"},"signature":{"hash":"bFDcq4InY8oVBtnkfJ6VjvgRWm8=","keyId":{"high":1676484925,"low":18,"unsigned":false}}},"code":2,"codeName":"BadValue","level":"error","ok":0,"operationTime":{"$timestamp":"7236008605055451140"}}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"TypeError: song.populat is not a function\n    at addNewSong (C:\\project\\music_player\\back\\controller\\songC.js:43:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"error","message":"TypeError: song.populat is not a function\n    at addNewSong (C:\\project\\music_player\\back\\controller\\songC.js:43:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}
+{"level":"error","message":"TypeError: song.populat is not a function\n    at addNewSong (C:\\project\\music_player\\back\\controller\\songC.js:43:30)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"}

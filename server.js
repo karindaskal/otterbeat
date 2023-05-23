@@ -16,9 +16,9 @@ app.use("/song", songRouter,)
 app.use("/auth", authRouter,)
 app.use("/mangment", managementRouter)
 app.use((err, req, res, next) => {
-    console.log(err[0] + " " + err[1])
-    logger.error(err[0])
-    res.status(err[1]).json(err[0])
+    console.log(err[0].stack + " " + err[1])
+    logger.error(err[0].stack)
+    res.status(err[1]).send()
 
 })
 connectToDB();

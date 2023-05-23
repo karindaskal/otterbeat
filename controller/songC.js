@@ -45,7 +45,7 @@ const addNewSong = (async (req, res, next) => {
 
     }
     catch (err) {
-        next([err.message, 500])
+        next([err, 500])
     }
 
 
@@ -64,7 +64,7 @@ const deleteSong = async (req, res, next) => {
 }
 const stringToSec = (hms) => {
     var a = hms.split(':');
-    var seconds // split it at the colons
+    var seconds
     if (a.length == 1) {
         seconds = parseInt(a[0])
 
