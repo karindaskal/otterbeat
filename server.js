@@ -1,15 +1,20 @@
 const mongoose = require("mongoose")
 const express = require("express")
-const app = express();
+var cors = require('cors');
 const logger = require("./logger");
 const songRouter = require('./router/song')
 const authRouter = require('./router/auth')
 const userRouter = require('./router/user')
 const managementRouter = require('./router/management')
 const { connectToDB } = require("./db/index");
-
+const app = express();
 app.use(express.json());
 
+
+
+
+var cors = require('cors');
+app.use(cors());
 
 app.use("/user", userRouter,)
 app.use("/song", songRouter,)

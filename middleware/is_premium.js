@@ -3,6 +3,7 @@ async function canAdd(req, res, next) {
     try {
 
         const user = await User.findById(res.locals.id)
+        console.log("canadd")
         if (user.is_premium || user.favorites.length < 5) {
             res.locals.canAdd = true;
 

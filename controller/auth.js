@@ -8,10 +8,10 @@ const register = (async (req, res, next) => {
     try {
         const salt = await bcrypt.genSalt(10)
         if (req.body.password.length < 6) {
-            next(["invalid password", 403])
+            next([new Error("invalid password"), 403])
         }
         else if (req.body.user_name.length < 1) {
-            next(["user name can't be emptey", 403])
+            next([new Error("user name can't be emptey"), 403])
         }
         else {
             const hash = await bcrypt.hash(req.body.password, salt);
@@ -31,11 +31,15 @@ const register = (async (req, res, next) => {
 const login = (async (req, res, next) => {
     try {
 
+
         const user = await User.findOne({ email: req.body.email });
-        !user && res.status(404).json("user not found");
+        if (!user) {
+            return next([new Error("user not found"), 404])
+        }
+
         const isValid = await bcrypt.compare(req.body.password, user.password);
         if (!isValid) {
-            next(["worng password", 404])
+            return next([new Error("worng password"), 404])
         }
         else {
             const token = generateToken({ id: user._id });

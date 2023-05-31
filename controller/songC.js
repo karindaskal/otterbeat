@@ -12,24 +12,45 @@ const Artis = require('../models/artist');
 const getByArtist = (async (req, res, next) => {
     try {
         const { query } = req;
-        let song
-        if (Object.keys(query).length > 0) {
-            const artist = await Artis.findOne({ artis_name: { $regex: query.artisname } })
-            if (!artist) {
-                res.status(200).json({});
-            }
-            song = await Song.find({ artist_Id: artist._id }).populate("artist_Id")
 
+
+        if (Object.keys(query).length > 0) {
+            const name = new RegExp(query.artisname, "i");
+
+            const artist = await Artis.find({ artis_name: { $regex: name } })
+
+            if (!artist) {
+                res.status(200).json([]);
+            }
+
+            // const song = await Promise.all(
+            //     artist.map(async (a) => {
+            //         //  console.log(await Song.find({ artist_Id: a._id }).populate("artist_Id"))
+
+            //         const s= await Song.find({ artist_Id: a._id }).populate("artist_Id")
+            //         return s.map((s)=>{
+            //             return s
+            //         })
+
+
+            //     }))
+            const id = artist.map((a) => {
+                return a._id
+            })
+            const song = await Song.find({ artist_Id: id }).populate("artist_Id")
+            res.status(200).json(song);
         }
+
         else {
 
-            song = await Song.find().populate("artist_Id");
+            const songs = await Song.find().populate("artist_Id");
+            res.status(200).json(songs);
         }
 
-        res.status(200).json(song);
+
     }
     catch (err) {
-        next([err.message, 500])
+        next([err, 500])
 
     }
 

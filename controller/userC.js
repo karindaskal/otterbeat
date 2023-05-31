@@ -1,7 +1,7 @@
-const bcrypt = require("bcrypt")
+
 const User = require("../models/user")
-const logger = require("../logger");
-const NodeCache = require("node-cache");
+
+
 const Song = require("../models/song");
 const { addToChase, delateFronCache, hasKey, getDataParse, setKey } = require("../utils/cache")
 
@@ -10,6 +10,7 @@ const like = (async (req, res, next) => {
         const key = res.locals.id;
         const user = await User.findById(key)
         if (!user.favorites.includes(req.params.id)) {
+            console.log("add")
             if (!res.locals.canAdd) {
                 return next(["cant add more", 500])
             }
@@ -21,6 +22,7 @@ const like = (async (req, res, next) => {
 
         }
         else {
+            console.log("no add")
 
             await user.updateOne({ $pull: { favorites: req.params.id } })
             if (await hasKey(key)) {
@@ -44,9 +46,8 @@ const update = (async (req, res, next) => {
         if (!user_id) next(["somthig worng", 500])
         else {
             const user = await User.findByIdAndUpdate(user_id, { $set: req.body, })
-            const d = await User.aggregate([{ $unwind: "$favorites" }, { $group: { _id: "$favorites", count: { $sum: 1 } } }, { $sort: { count: -1 } }, { $populate: "_id" }]).limit(3)
             //  User.aggregate([{ $unwind: "$favorites" }, { $populate: "$favorites" }])
-            console.log(d)
+
             res.status(200).json(user)
         }
     }
@@ -56,19 +57,22 @@ const update = (async (req, res, next) => {
 })
 const getFavorite = (async (req, res, next) => {
     const user_id = res.locals.id
-    console.log(user_id)
+
     try {
         if (await hasKey(user_id)) {
-            console.log("fron cache")
+            //    console.log("fron cash")
+
             res.status(200).json(await getDataParse(user_id))
         } else {
-            console.log("fron db")
+            //  console.log("fron db")
             const user = await User.findById(user_id);
             const arrSongID = (await user.populate({ path: "favorites", populate: { path: "artist_Id" } })).favorites
             if (arrSongID.length > 0) {
-                await setKey(key, arrSongID)
+                await setKey(user_id, arrSongID)
             }
+            //   console.log(arrSongID)
             res.status(200).json(arrSongID)
+
         }
     }
     catch (err) {
