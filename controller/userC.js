@@ -12,7 +12,7 @@ const like = (async (req, res, next) => {
         if (!user.favorites.includes(req.params.id)) {
             console.log("add")
             if (!res.locals.canAdd) {
-                return next(["cant add more", 500])
+                return next([new Error("cant add more"), 500])
             }
             await user.updateOne({ $push: { favorites: req.params.id } })
             if (await hasKey(key)) {
@@ -35,7 +35,7 @@ const like = (async (req, res, next) => {
     }
     catch (err) {
 
-        next([err.message, 500])
+        next([err, 500])
     }
 })
 const update = (async (req, res, next) => {
@@ -43,7 +43,7 @@ const update = (async (req, res, next) => {
 
     try {
         const user_id = res.locals.id
-        if (!user_id) next(["somthig worng", 500])
+        if (!user_id) next([new Error("somthig worng"), 500])
         else {
             const user = await User.findByIdAndUpdate(user_id, { $set: req.body, })
             //  User.aggregate([{ $unwind: "$favorites" }, { $populate: "$favorites" }])
@@ -76,7 +76,7 @@ const getFavorite = (async (req, res, next) => {
         }
     }
     catch (err) {
-        next([err.message, 500])
+        next([err, 500])
     }
 
 })
